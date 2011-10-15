@@ -19,7 +19,7 @@ Or from source:
 AuthHmac provides HMAC signing for Node HTTP requests, it has been inspired by the Ruby AuthHMAC gem: https://github.com/seangeo/auth-hmac 
 
 ```javascript
-authhmac = require('authhmac');
+var authhmac = require('authhmac');
 
 var key = 'my hmac key';
 var secret = 'my hmac secret'; 
