@@ -1,5 +1,5 @@
 {
-    "name": "auth_hmac"
+    "name": "authhmac"
   , "version": "0.0.1"
   , "tags" : ["http", "hmac", "authentication"]
   , "description": "HMAC signature for NodeJS HTTP requests"
