@@ -5,4 +5,10 @@
   , "description": "HMAC signature for NodeJS HTTP requests"
   , "engines" : ["node >= 0.3.6"]
   , "main" : "./auth_hmac"
+  , "repository" :
+    { "type" : "git"
+      , "url" : "git://github.com/cloudify/node-authhmac.git"
+    }
+  , "bugs" :
+    { "web" : "https://github.com/cloudify/node-authhmac/issues" }
 }
