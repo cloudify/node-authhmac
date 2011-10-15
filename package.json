@@ -1,0 +1,8 @@
+{
+    "name": "auth_hmac"
+  , "version": "0.0.1"
+  , "tags" : ["http", "hmac", "authentication"]
+  , "description": "HMAC signature for NodeJS HTTP requests"
+  , "engines" : ["node >= 0.3.6"]
+  , "main" : "./auth_hmac"
+}
