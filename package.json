@@ -1,14 +1,20 @@
 {
-    "name": "authhmac"
-  , "version": "0.0.1"
-  , "tags" : ["http", "hmac", "authentication"]
-  , "description": "HMAC signature for NodeJS HTTP requests"
-  , "engines" : ["node >= 0.3.6"]
-  , "main" : "./auth_hmac"
-  , "repository" :
-    { "type" : "git"
-      , "url" : "git://github.com/cloudify/node-authhmac.git"
-    }
-  , "bugs" :
-    { "web" : "https://github.com/cloudify/node-authhmac/issues" }
+  "name" : "authhmac",
+  "version" : "0.0.1",
+  "tags" : ["http", "hmac", "authentication"],
+  "description": "HMAC signature for NodeJS HTTP requests",
+  "author" : "Federico Feroldi <fferoldi@gild.com>",
+  "engine" : "node >= 0.4.1",
+  "main" : "./auth_hmac",
+  "repository" : {
+    "type" : "git",
+    "url" : "git://github.com/cloudify/node-authhmac.git"
+  },
+  "bugs" : {
+    "web" : "https://github.com/cloudify/node-authhmac/issues"
+  }, 
+  "devDependencies": {
+    "vows" : "0.5.x",
+    "coffee-script" : ">= 1.1.2"
+  }
 }
