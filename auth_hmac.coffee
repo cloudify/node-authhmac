@@ -15,14 +15,14 @@ timestamp = () ->
   "#{dow}, #{day} #{month} #{year} #{hours}:#{minutes}:#{seconds} GMT"
 
 sign_request = (http_options, key, secret) ->
-  return false unless http_options['headers']?
-  http_options['headers']['Date'] = timestamp() unless http_options['headers']['Date']?
-  canonical_string = http_options['method'] + "\n"
+  http_options['headers'] ?= {}
+  http_options['headers']['Date'] ?= timestamp()
+  canonical_string = (http_options['method'] || 'GET') + "\n"
   canonical_string += (http_options['headers']['Content-Type'] || '') + "\n"
   canonical_string += (http_options['headers']['Content-MD5'] || '') + "\n"
   canonical_string += http_options['headers']['Date'] + "\n"
-  canonical_string += http_options['path'] || ''
-
+  canonical_string += (http_options['path'] || '').split('?')[0]
+  
   hmac_signature = crypto.createHmac "sha1", secret
   hmac_signature.update canonical_string
   

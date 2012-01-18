@@ -1,6 +1,6 @@
 {
   "name" : "authhmac",
-  "version" : "0.0.1",
+  "version" : "0.0.2",
   "tags" : ["http", "hmac", "authentication"],
   "description": "HMAC signature for NodeJS HTTP requests",
   "author" : "Federico Feroldi <fferoldi@gild.com>",

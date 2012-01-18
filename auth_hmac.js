@@ -21,18 +21,18 @@
     return "" + dow + ", " + day + " " + month + " " + year + " " + hours + ":" + minutes + ":" + seconds + " GMT";
   };
   sign_request = function(http_options, key, secret) {
-    var canonical_string, hmac_signature, hmac_signature_base64;
-    if (http_options['headers'] == null) {
-      return false;
+    var canonical_string, hmac_signature, hmac_signature_base64, _base, _ref, _ref2;
+    if ((_ref = http_options['headers']) == null) {
+      http_options['headers'] = {};
     }
-    if (http_options['headers']['Date'] == null) {
-      http_options['headers']['Date'] = timestamp();
+    if ((_ref2 = (_base = http_options['headers'])['Date']) == null) {
+      _base['Date'] = timestamp();
     }
-    canonical_string = http_options['method'] + "\n";
+    canonical_string = (http_options['method'] || 'GET') + "\n";
     canonical_string += (http_options['headers']['Content-Type'] || '') + "\n";
     canonical_string += (http_options['headers']['Content-MD5'] || '') + "\n";
     canonical_string += http_options['headers']['Date'] + "\n";
-    canonical_string += http_options['path'] || '';
+    canonical_string += (http_options['path'] || '').split('?')[0];
     hmac_signature = crypto.createHmac("sha1", secret);
     hmac_signature.update(canonical_string);
     hmac_signature_base64 = hmac_signature.digest("base64");
