@@ -1,3 +1,4 @@
+[![build status](https://secure.travis-ci.org/cloudify/node-authhmac.png)](http://travis-ci.org/cloudify/node-authhmac)
 # AuthHMAC -- HMAC signing for Node HTTP
 
 ## Install
